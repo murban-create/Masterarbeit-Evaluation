@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.container {
+    position: relative;
+    background: url('A_minimalistic_gradient_background_featuring_abst.png') no-repeat center center / cover;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px; /* Breiterer Container */
+    min-height: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('A_minimalistic_gradient_background_featuring_abstr.png') no-repeat center center / cover;
+    opacity: 0.3; /* Transparenz des Bildes */
+    border-radius: 15px;
+    z-index: -1; /* Bild hinter den Inhalt legen */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Abstand zwischen den Elementen */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px; /* Abstand unterhalb des Headers */
+}
+
+h1 {
+    color: #333;
+    margin: 0 20px; /* Abstand zu den Seiten */
+}
+
+.side-image {
+    width: 100px; /* Kleinere Größe */
+    height: 100px; /* Kleinere Größe */
+    border-radius: 30%; /* Runde Ecken */
+    object-fit: cover; /* Bild passend zuschneiden */
+}
+
+.button {
+    display: block;
+    width: 80%;
+    margin: 10px 0;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    color: white;
+}
